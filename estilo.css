@@ -1,0 +1,281 @@
+body {
+    background-color: #101010;
+    color: white;
+    font-family: Arial;
+    margin: 0;
+}
+
+
+.menu {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    padding: 20px 80px;
+}
+
+.menu .logo {
+    color: #00aaff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu .links {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 30px;
+}
+
+.menu .links a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu .links a:hover {
+    color: #00aaff;
+}
+
+
+.inicio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+    margin-top: 100px;
+    padding: 0 80px;
+}
+
+.texto {
+    width: 100%;
+}
+
+h1 {
+    color: #00aaff;
+    font-size: 45px;
+}
+
+h2 {
+    color: #cccccc;
+}
+
+p {
+    font-size: 18px;
+}
+
+.foto {
+    display: grid;
+    place-items: center;
+}
+
+.foto img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 5px solid #00aaff;
+}
+
+.botao {
+    display: inline-block;
+    background-color: #00aaff;
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+
+.sobre {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    background-color: white;
+    color: black;
+    margin-top: 150px;
+    padding: 80px;
+}
+
+.sobretexto {
+    width: 100%;
+}
+
+.sobretexto h1 {
+    color: #00aaff;
+}
+
+.sobretexto p {
+    color: black;
+    font-size: 18px;
+}
+
+
+.interesses {
+    margin-top: 0;
+}
+
+.interesses h1 {
+    color: #00aaff;
+}
+
+.interesses p {
+    color: black;
+    font-size: 18px;
+}
+
+.lista-interesses {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.card-interesse {
+    background-color: #f2f2f2;
+    border-left: 5px solid #00aaff;
+    border-radius: 10px;
+    padding: 15px;
+    color: black;
+}
+
+
+.habilidades {
+    padding: 80px;
+}
+
+.habilidades h1 {
+    text-align: center;
+}
+
+.grid-habilidades {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.habilidade {
+    display: grid;
+    place-items: center;
+    background-color: #1a1a1a;
+    border: 2px solid #00aaff;
+    border-radius: 12px;
+    padding: 30px 15px;
+    font-weight: bold;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.habilidade:hover {
+    transform: translateY(-5px);
+    background-color: #00aaff;
+}
+
+.projetos {
+    padding: 80px;
+    background-color: #181818;
+}
+
+.projetos h1 {
+    text-align: center;
+}
+
+.grid-projetos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.projeto {
+    display: grid;
+    grid-template-rows: 180px auto auto;
+    gap: 10px;
+    background-color: #101010;
+    border-radius: 12px;
+    padding: 15px;
+    border: 1px solid #333;
+}
+
+.projeto .imagem {
+    background-color: #00aaff33;
+    border-radius: 8px;
+}
+
+.projeto h3 {
+    color: #00aaff;
+    margin: 0;
+}
+
+.projeto p {
+    font-size: 16px;
+    color: #cccccc;
+    margin: 0;
+}
+
+
+.rodape {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 50px 80px;
+    background-color: #000;
+    color: #cccccc;
+}
+
+.rodape h3 {
+    color: #00aaff;
+}
+
+.rodape p {
+    font-size: 16px;
+}
+
+
+@media (max-width: 1024px) {
+
+    .grid-projetos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .menu {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 15px;
+        padding: 20px 30px;
+    }
+
+    .inicio {
+        grid-template-columns: 1fr;
+        padding: 30px;
+        text-align: center;
+    }
+
+    .foto {
+        order: -1;
+    }
+
+    .sobre {
+        grid-template-columns: 1fr;
+        padding: 40px;
+    }
+
+    .lista-interesses {
+        grid-template-columns: 1fr;
+    }
+
+    .habilidades,
+    .projetos {
+        padding: 40px 30px;
+    }
+
+    .grid-projetos {
+        grid-template-columns: 1fr;
+    }
+
+    .rodape {
+        grid-template-columns: 1fr;
+        padding: 40px 30px;
+        text-align: center;
+    }
+
+}
